@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Roboto';
+    overflow: hidden !important;
+}
+.long-time-ago{
+    color: rgb(75, 213, 238);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: intro 6s ease-in-out 1s;
+    opacity: 0;
+}
+.long-time-ago h1{
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: lighter;
+}
+@keyframes intro {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+.logo{  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 2;  
+}
+.logo img{
+    opacity: 0;  
+    animation: logo-anime 14s ease-out 8s;
+}
+@keyframes logo-anime{
+    0%{
+        opacity: 1;
+        transform: scale(4);
+    }
+    90%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+.container{
+    height: 450px;
+    width: 1000px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    overflow: hidden;
+}
+.scroller{
+    visibility: hidden;
+    color: #FFDE06;
+    text-align: center; 
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: scroller 100s linear forwards 15s;
+}
+@keyframes scroller{
+    0%{
+        top: 100%;
+        visibility: visible;
+    }
+    100%{
+        top: -1500%;
+        visibility: visible;
+    }
+}
+.scroller h1,h2{
+    font-size: 4rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.scroller li{
+    list-style: none;
+    text-align: justify;
+    font-size: 4rem;
+}
+.stars{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    background-color: white;
+    z-index: 2;
+}
+/* .theme{
+    opacity: 0;
+} */
